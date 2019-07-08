@@ -1,0 +1,12 @@
+.comment-input{
+
+    resize: both;
+
+}
+
+.feed{
+
+    display: grid;
+    place-items: center;
+
+}
