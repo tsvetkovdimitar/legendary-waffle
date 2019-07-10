@@ -6,11 +6,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "comment")
-public class Comment extends BaseEntity {
+public class Post extends BaseEntity {
 
     private String text;
 
-    public Comment() {
+    public Post() {
 
     }
 
