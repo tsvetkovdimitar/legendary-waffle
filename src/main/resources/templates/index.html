@@ -11,7 +11,14 @@
     </div>
     <div class="feed container-fluid align-items-center mr-auto ml-auto">
         <div class="col-xl-8 col-md-8 align-top align-self-center">
-            <th:block th:include="~{fragments/post}"></th:block>
+            <form th:action="@{/}" th:object="${addPostBindingModel}" method="post">
+                <div class="form-group mt-3">
+                    <label for="inputPost">Post:</label>
+                    <textarea class="comment-input form-control" type="text" rows="3" id="inputPost" th:field="*{text}"></textarea>
+                    <small id="postHelp" th:if="${#fields.hasErrors('text')}" th:errors="*{text}"></small>
+                    <button type="submit" class="btn btn-outline-info mt-3">Submit</button>
+                </div>
+            </form>
         </div>
         <div class="jumbotron col-xl-8 col-md-8 align-bottom align-self-center bg-light">
         </div>

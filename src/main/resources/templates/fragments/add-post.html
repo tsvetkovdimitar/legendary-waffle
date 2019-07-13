@@ -1,0 +1,10 @@
+<th:block th:fragment lang="en" xmlns:th="http://www.thymeleaf.org">
+    <form th:action="@{/}" th:object="${addPostBindingModel}" method="post">
+        <div class="form-group mt-3">
+            <label for="inputPost">Post:</label>
+            <textarea class="comment-input form-control" type="text" rows="3" id="inputPost" th:field="*{text}"></textarea>
+            <small id="postHelp" th:if="${#fields.hasErrors('text')}" th:errors="*{text}"></small>
+            <button type="submit" class="btn btn-outline-info mt-3">Submit</button>
+        </div>
+    </form>
+</th:block>

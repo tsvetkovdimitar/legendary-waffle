@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "comment")
+@Table(name = "posts")
 public class Post extends BaseEntity {
 
     private String text;
